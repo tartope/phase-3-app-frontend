@@ -2,7 +2,6 @@ import React from "react";
 
 function Patient({ patient }) {
 
-
     function handleDeleteClick(event) {
         // TODO: Delete the patient.
     }

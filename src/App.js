@@ -19,11 +19,27 @@ function App() {
     })
   }, [])
 
+  // function handleNewPatient(patient){
+  //   fetch(patientsAPI, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(patient),
+  //   })
+  //   .then(response => response.json())
+  //   .then(json => {
+  //     setPatients([...patients, json])
+  //   })
+  //   .catch(err => console.error(err))
+  // }
+
+  // add 'handleNewPatient={handleNewPatient}' to <NewPatientForm />
   return (
     <div className="root">
       <Header/>
       <div className="content">
-        <NewPatientForm />
+        <NewPatientForm   />  
         <PatientList patients={patients} />
       </div>
     </div>
