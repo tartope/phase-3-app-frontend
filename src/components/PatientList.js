@@ -16,7 +16,7 @@ function PatientList({ patients }) {
                 <th>Patient Name</th>
                 <th>Diagnosis</th>
                 <th>Age</th>
-                <th>Floor</th>
+                <th>Room</th>
                 <th>Therapist</th>
             </tr>
             {patientList}

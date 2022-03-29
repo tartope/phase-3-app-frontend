@@ -15,7 +15,7 @@ function NewPatientForm() {
                     <option value="broken_leg">broken leg</option>
                 </select>
                 <input id="age" type="text" placeholder="Patient Age" />
-                <input id="floor" type="text" placeholder="Floor" />
+                <input id="room-number" type="text" placeholder="Room" />
                 <input id="therapist-name" type="text" placeholder="Therapist Name" />
                 <input type="submit" value="Add Patient" />
             </form>
