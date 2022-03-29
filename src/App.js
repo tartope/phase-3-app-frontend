@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React, {useEffect, useState } from "react"
 import './App.css';
+import Header from './components/Header';
+import NewPatientForm from './components/NewPatientForm';
+import PatientList from './components/PatientList';
+
+const patientsAPI = 'http://localhost:9292/patients';
 
 function App() {
+
+  const [patients, setPatients] = useState([]);
+
+  useEffect(()=>{
+    fetch(patientsAPI)
+    .then(response => response.json())
+    .then(patientsData =>{
+      // console.log(patientsData)
+      setPatients(patientsData)
+    })
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="root">
+      <Header/>
+      <div className="content">
+        <NewPatientForm />
+        <PatientList patients={patients} />
+      </div>
     </div>
   );
 }

@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+/* Palette: https://coolors.co/528976-ffe184-7d80da-eeeeff-0d1b2a */
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Noto Serif', serif;
+  color: #0D1B2A;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #eeeeff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.root {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  display:flex;
+  flex-direction: column;
+  gap:2%;
+  align-items: center;
+  background-color: #0D1B2A;
+  color: #eeeeff;
+  padding: 2%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header div {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:2%;
+}
+
+header img {
+  display:block;
+  width:30%;
+  height:auto;
+}
+
+header input[type=text] {
+  width: 50%;
+  height:3em;
+  font-size: 1.25em;
+  background: none;
+  border:1px solid #eeeeff;
+  border-radius: 4px;
+  color:#eeeeff;
+  margin-top:1%;
+  padding:.5rem;
+}
+
+header h1 {
+  font-size: 2.0rem;
+  margin-top: 10%;
+  margin-bottom: 0%;
+}
+
+form {
+  display:flex;
+  flex-direction: column;
+  gap: .5em;
+  border: 1px solid #0D1B2A;
+  border-radius:4px;
+  width:20%;
+  padding:1em;
+}
+
+table {
+  border: 1px solid #0D1B2A;
+  border-radius:4px;
+  padding:.5em;
+  width:60%;
+}
+
+.content {
+  display:flex;
+  gap:3em;
+  align-items:baseline;
+  justify-content: center;
+}
+
+.deceased {
+  
 }
