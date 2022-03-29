@@ -14,7 +14,7 @@ function Patient({ patient }) {
             <td>{patient.patient_name}</td>
             <td>{patient.patient_diagnosis}</td>
             <td>{patient.age}</td>
-            <td>{patient.patient_floor_id}</td>
+            <td>{patient.patient_floor.room_number}</td>
             <td>{patient.therapist.name}</td>
         </tr>
     )
