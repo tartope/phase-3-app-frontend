@@ -79,8 +79,10 @@ function App() {
   return (
     <div className="root">
       <Header/>
-      <div className="content">
-        <NewPatientForm  handleNewPatient={handleNewPatient} handleNewFloor={handleNewFloor} handleNewTherapist={handleNewTherapist} />  
+      <div id="newpatient">
+        <NewPatientForm  handleNewPatient={handleNewPatient} handleNewFloor={handleNewFloor} handleNewTherapist={handleNewTherapist} /> 
+        </div> 
+        <div id="patientlist">
         <PatientList patients={patients} handleDeletePatient={handleDeletePatient} />
       </div>
     </div>
