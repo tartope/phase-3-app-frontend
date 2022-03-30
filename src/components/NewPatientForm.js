@@ -47,8 +47,20 @@ function NewPatientForm({ handleNewPatient, handleNewFloor, handleNewTherapist }
                     <option value="broken_leg">broken leg</option>
                 </select>
                 <input id="age" type="text" placeholder="Patient Age" />
-                <input id="room" type="text" placeholder="Room" />
-                <input id="therapist-name" type="text" placeholder="Therapist Name" />
+                <select name="room" id="room" form="new-patient-form">
+                    <option value="101">101</option>
+                    <option value="201">201</option>
+                    <option value="301">301</option>
+                    <option value="401">401</option>
+                    <option value="501">501</option>
+                    <option value="601">601</option>
+                </select>
+                <select name="therapist-name" id="therapist-name" form="new-patient-form">
+                    <option value="rick">Rick</option>
+                    <option value="john">John</option>
+                    <option value="tunisia">Tunisia</option>
+                    <option value="evan">Evan</option>
+                </select>
                 <input type="submit" value="Add Patient" />
             </form>
         </>
