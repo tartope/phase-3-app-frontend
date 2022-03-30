@@ -1,32 +1,41 @@
 import React from "react"
 
-function NewPatientForm({ handleNewPatient }) {  //<---add 'handleNewPatient' as prop
+function NewPatientForm({ handleNewPatient, handleNewFloor, handleNewTherapist }) {  //<---add 'handleNewPatient' as prop
 
-    // function handleFormSubmit(event){
-    //     event.preventDefault()
+    function handleFormSubmit(event){
+        event.preventDefault()
         
-    //     const patienttName = event.target['patient-name'].value
-    //     const diagnosis = event.target['diagnosis'].value
-    //     const age = event.target['age'].value
-    //     const room = event.target['room'].value
-    //     const therapistName = event.target['therapist-name'].value
+        const patienttName = event.target['patient-name'].value
+        const diagnosis = event.target['diagnosis'].value
+        const age = event.target['age'].value
+        const room = event.target['room'].value
+        const therapistName = event.target['therapist-name'].value
         
-    //     const newPatient = {
-    //         patient_name: patienttName,
-    //         patient_diagnosis: diagnosis,
-    //         age: age,
-    //         patient_floor_id: room,
-    //         therapist_id: therapistName
-    //     };
+        const newPatient = {
+            patient_name: patienttName,
+            patient_diagnosis: diagnosis,
+            age: age,
+            patient_floor_id: 1,
+            therapist_id: 1
+        };
+        const newFloor = { 
+            floor_number: 1,
+            room_number: room
+        }
+        const newTherapist = {
+            name: therapistName
+        }
         
-    //     handleNewPatient(newPatient);
+        handleNewPatient(newPatient);
+        handleNewFloor(newFloor);
+        handleNewTherapist(newTherapist);
         
-    //     event.target.reset();
-    // }
+        event.target.reset();
+    }
 
     return(   //add 'onSubmit={handleFormSubmit}' inside line 29
         <>
-            <form id="new-patient-form"  >      
+            <form id="new-patient-form"  onSubmit={handleFormSubmit}>      
                 <input id="patient-name" type="text" placeholder="Patient Name" />
                 <select name="diagnosis" id="diagnosis" form="new-patient-form">
                     <option value="stroke">stroke</option>
