@@ -1,6 +1,6 @@
 import React from "react"
 
-function NewPatientForm({ handleNewPatient, handleNewFloor, handleNewTherapist }) {  //<---add 'handleNewPatient' as prop
+function NewPatientForm({ handleNewPatient }) {  //<---add 'handleNewPatient' as prop
 
     function handleFormSubmit(event){
         event.preventDefault()
@@ -18,17 +18,17 @@ function NewPatientForm({ handleNewPatient, handleNewFloor, handleNewTherapist }
             patient_floor_id: 1,
             therapist_id: 1
         };
-        const newFloor = { 
-            floor_number: 1,
-            room_number: room
-        }
-        const newTherapist = {
-            name: therapistName
-        }
+        // const newFloor = { 
+        //     floor_number: 1,
+        //     room_number: room
+        // }
+        // const newTherapist = {
+        //     name: therapistName
+        // }
         
         handleNewPatient(newPatient);
-        handleNewFloor(newFloor);
-        handleNewTherapist(newTherapist);
+        // handleNewFloor(newFloor);
+        // handleNewTherapist(newTherapist);
         
         event.target.reset();
     }

@@ -44,7 +44,7 @@ header input[type=text] {
   background: none;
   border:1px solid #270C0C;
   border-radius: 4px;
-  color:#eeeeff;
+  color: black;
   margin-top:1%;
   padding:.5rem;
 }
