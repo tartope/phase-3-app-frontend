@@ -15,8 +15,8 @@ function NewPatientForm({ handleNewPatient }) {
             patient_name: patienttName,
             patient_diagnosis: diagnosis,
             age: age,
-            patient_floor_id: 1,
-            therapist_id: 1
+            patient_floor_id: room,
+            therapist_id: therapistName
         };
         
         handleNewPatient(newPatient);
@@ -41,19 +41,17 @@ function NewPatientForm({ handleNewPatient }) {
                 </select>
                 <label for="room">Room:</label>
                 <select name="room" id="room" form="new-patient-form">
-                    <option value="101">101</option>
-                    <option value="201">201</option>
-                    <option value="301">301</option>
-                    <option value="401">401</option>
-                    <option value="501">501</option>
-                    <option value="601">601</option>
+                    <option value="1">101</option>
+                    <option value="2">201</option>
+                    <option value="3">301</option>
+                    <option value="4">401</option>
                 </select>
                 <label for="therapistname">Therapist:</label>
                 <select name="therapist-name" id="therapist-name" form="new-patient-form">
-                    <option value="rick">Rick</option>
-                    <option value="john">John</option>
-                    <option value="tunisia">Tunisia</option>
-                    <option value="evan">Evan</option>
+                    <option value="1">Rick</option>
+                    <option value="2">John</option>
+                    <option value="3">Tunisia</option>
+                    <option value="4">Evan</option>
                 </select>
                 <input type="submit" value="Add Patient" />
             </form>
