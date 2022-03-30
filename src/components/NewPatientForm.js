@@ -1,6 +1,6 @@
 import React from "react"
 
-function NewPatientForm({ handleNewPatient }) {  //<---add 'handleNewPatient' as prop
+function NewPatientForm({ handleNewPatient }) {  
 
     function handleFormSubmit(event){
         event.preventDefault()
@@ -18,22 +18,13 @@ function NewPatientForm({ handleNewPatient }) {  //<---add 'handleNewPatient' as
             patient_floor_id: 1,
             therapist_id: 1
         };
-        // const newFloor = { 
-        //     floor_number: 1,
-        //     room_number: room
-        // }
-        // const newTherapist = {
-        //     name: therapistName
-        // }
         
         handleNewPatient(newPatient);
-        // handleNewFloor(newFloor);
-        // handleNewTherapist(newTherapist);
         
         event.target.reset();
     }
 
-    return(   //add 'onSubmit={handleFormSubmit}' inside line 29
+    return(   
         <>
             <form id="new-patient-form"  onSubmit={handleFormSubmit}>      
                 <input id="patient-name" type="text" placeholder="Patient Name" />
