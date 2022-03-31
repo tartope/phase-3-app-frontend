@@ -16,7 +16,6 @@ text-align: center;
 margin: 10px;
 }
 #top-home-paragraph {
-  float: left;
 }
 .root {
   display: flex;
@@ -124,3 +123,4 @@ a {
 .links {
   display: inline;
 }
+

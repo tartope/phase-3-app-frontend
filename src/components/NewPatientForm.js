@@ -29,7 +29,7 @@ function NewPatientForm({ handleNewPatient }) {
             <form id="new-patient-form"  onSubmit={handleFormSubmit}>      
                 <input id="patient-name" type="text" placeholder="Patient Name" />
                 <input id="age" type="text" placeholder="Patient Age" />
-                <label for="diagnosis">Diagnosis:</label>
+                <label htmlFor="diagnosis">Diagnosis:</label>
                 <select name="diagnosis" id="diagnosis" form="new-patient-form">
                     <option value="stroke">stroke</option>
                     <option value="knee_replacement">knee replacement</option>
@@ -39,14 +39,14 @@ function NewPatientForm({ handleNewPatient }) {
                     <option value="broken_shoulder">broken shoulder</option>
                     <option value="broken_leg">broken leg</option>
                 </select>
-                <label for="room">Room:</label>
+                <label htmlFor="room">Room:</label>
                 <select name="room" id="room" form="new-patient-form">
                     <option value="1">101</option>
                     <option value="2">201</option>
                     <option value="3">301</option>
                     <option value="4">401</option>
                 </select>
-                <label for="therapistname">Therapist:</label>
+                <label htmlFor="therapistname">Therapist:</label>
                 <select name="therapist-name" id="therapist-name" form="new-patient-form">
                     <option value="1">Rick</option>
                     <option value="2">John</option>
