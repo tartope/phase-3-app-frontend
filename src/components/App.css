@@ -8,6 +8,15 @@ html, body {
 }
 body {
   background-color: #FFA952;
+
+}
+/* home page */
+#home-1 {
+text-align: center;
+margin: 10px;
+}
+#top-home-paragraph {
+  float: left;
 }
 .root {
   display: flex;
@@ -97,4 +106,21 @@ th {
 }
 td {
   color: #0D1B2A;
+}
+/* nav bar css */
+.nav {
+  display: inline;
+  display: block;
+  padding: 8px;
+  background-color: lightskyblue;
+}
+a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 16px;
+}
+
+.links {
+  display: inline;
 }
